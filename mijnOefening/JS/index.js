@@ -1,26 +1,22 @@
 function setup() {
   canvas = createCanvas(450,450);
-  background('darkred');
+  background('white');
   //canvas.parent('processing');
   noLoop();
+  colorMode(RGB,255,255,255,1);
 }
 
 function draw() {
-   noStroke();
+  noStroke();
+  fill(2,146,32,0.3);
+ 
+  rect(0,150,450,150);
 
-   fill('pink');
-   triangle(450,450,450,0,0,225);
+  rect(0,0,150,450);
+  
+  rect(75,0,375,450);
 
-   
-   fill('purple');
-   triangle(0,450,450,225,0,0);
-  /*strokeWeight(5);
-  stroke('pink');
-  fill('darkred');
-  beginShape();
-  vertex(225,115);
-  vertex(300,225);
-  vertex(225,335);
-  vertex(0,225);
-  endShape(CLOSE);*/
+  ellipse(450,225,450)
+
+  triangle(225,450,225,0,450,225);
 }
