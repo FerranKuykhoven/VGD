@@ -6,7 +6,7 @@ function setup() {
 }
 
 function draw() {
-  // teken de grond
+  /* teken de grond
   noStroke();
   fill('wheat');
   rect(0,350,450,100);
@@ -32,5 +32,16 @@ function draw() {
   fill('sienna');
   rect(300,250,40,130);
   fill('olive');
-  ellipse(320,230,100,150);
+  ellipse(320,230,100,150); */
+
+  noStroke();
+  fill('tan');
+  //translate(25,25);
+  rect(0,0,400,400);
+  //translate(200,50);
+  fill('peru');
+  rect(0,0,150,150);
+ 
+
+
 }
