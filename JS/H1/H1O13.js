@@ -14,17 +14,19 @@ function draw() {
   text("xJOS: " + round(xJOS) + " (mouseX:" + round(mouseX) + ")",10,20);
   text("yJOS: " + round(yJOS) + " (mouseY:" + round(mouseY) + ")",260,20);
   
-  xJOS = constrain(mouseX,100,450);
+  xJOS = constrain(mouseX,75,375);
+  yJOS = constrain(mouseY,75,375)
   
   scale(1);
-  translate(xJOS,225);
+  translate(xJOS,yJOS);
 
   // in de volgende regels wordt JOS getekend
 
   push();
+  scale(0.5)
   noStroke();
   fill('indianred');
-  ellipse(0,0,150);
+  ellipse(0,0,150); // in deze regel kan je zien hoe groot jos is 
   fill('slategray');
   ellipse(-20,-30,50);
   ellipse(20,-30,50);
