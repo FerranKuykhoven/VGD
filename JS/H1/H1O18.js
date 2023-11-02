@@ -1,6 +1,7 @@
 var xPositie = 0;
 var yPositie = 30;
 var schaal = 0.25;
+s = schaal
 
 function setup() {
   canvas = createCanvas(1000,300);
@@ -11,13 +12,16 @@ function setup() {
 }
 
 function draw() {
-  background(0,0,75,1);
-  tekenSter(xPositie,yPositie);
+  background(0,0,75,0.1);
+  tekenSter(xPositie,yPositie,s);
+  yPositie += 1; 
+  xPositie += 5;
+  s += 0.05;
 }
 
-function tekenSter(x,y) {
+function tekenSter(x,y,s) {
   push();
-  scale(1);
+  scale(s);
   strokeWeight(2);
   stroke('white');
   fill('khaki');

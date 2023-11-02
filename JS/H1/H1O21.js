@@ -20,20 +20,25 @@ function draw() {
   stroke('white');
   strokeWeight(10);
 
-  if (mouseIsPressed == true && snelheid == 5) {
-      fill('green');
+  diameter = 200;
+
+  if (mouseIsPressed == false ) {
+      fill('red');
+      diameter = 100
   }
+
+  else if (snelheid == 5) {
+    fill('green')
+  }
+
   else {
     fill('dodgerblue');
   }
   
-  if (x>880) {
-    snelheid = -1*snelheid;
+  if (x > 880 || x < 120) 
+  { 
+    snelheid = -1*snelheid; 
   }
-  if (x<120) {
-    snelheid = -1*snelheid;
-  }
-
   x += snelheid;
   ellipse(x,170,diameter);
 }
