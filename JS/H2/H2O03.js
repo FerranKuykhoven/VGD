@@ -1,5 +1,6 @@
 var strand;
 var strandX = 0;
+nummer = 0
 
 function preload() {
   strand = loadImage("images/backgrounds/strand.jpg");
@@ -13,7 +14,10 @@ function setup() {
 function draw() {
   background('grey');
   image(strand,strandX,0);
-  // image(strand,strandX + strand.width,0);  
+  image(strand,strandX + strand.width,0);  
 
   strandX--;
+  if(strandX <= -strand.width){
+   strandX = 0
+  }
 }
